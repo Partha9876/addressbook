@@ -1,0 +1,27 @@
+pipeline {
+    agent any
+
+    stages {
+         stage('compile') {
+             steps {
+                 script{
+                      echo 'Hello World'
+                }     
+            } 
+        }    
+         stage('unittest') {
+             steps {
+                 script{
+                      echo 'Unittest-Hello'
+                }
+            }
+        }    
+        stage('package') {
+            steps {
+                script{
+                     echo 'pacakge -hello' 
+                }
+            }
+        }
+    }
+}
